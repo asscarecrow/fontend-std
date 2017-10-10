@@ -1,6 +1,6 @@
 # JS
 
-## 注释{#}
+## 注释{#note}
 
 >As short as possible（如无必要，勿增注释）：尽量提高代码本身的清晰性、可读性。
 >As long as necessary（如有必要，尽量详尽）：合理的注释、空行排版等，可以让代码更易阅读、更具美感。
@@ -49,7 +49,7 @@ function foo(p1, p2, p3) {
  */
  ```
 
- ## 命名{#}
+ ## 命名{#name}
 
  *变量*，使用 Camel 命名法。
 
@@ -102,7 +102,7 @@ var TargetState = {
 };
 ```
 
-## 命名语法{# }
+## 命名语法{#sync}
 *类名*，使用名词。
 
 ```javascript
@@ -126,7 +126,7 @@ var loadingData = ajax.get('url');
 loadingData.then(callback);
 ```
 
-## True 和 False 布尔表达式{#}
+## True 和 False 布尔表达式{#boolean}
 类型检测优先使用 typeof。对象类型检测使用 instanceof。null 或 undefined 的检测使用 == null。或者!!
 
 下面的布尔表达式都返回 false:
@@ -140,7 +140,7 @@ loadingData.then(callback);
 * [] 空数组
 * {} 空对象
 
-## 不要在 Array 上使用 for-in 循环{# }
+## 不要在 Array 上使用 for-in 循环{#array}
 
 for-in 循环只用于 `object/map/hash` 的遍历，对 `Array` 用 for-in 循环有时会出错. 因为它并不是从 0 到 length - 1 进行遍历, 而是所有出现在对象及其原型链的键值。
 
@@ -176,7 +176,7 @@ function printArray(arr) {
   }
 }
 ```
-## 二元和三元操作符{#}
+## 二元和三元操作符{#operate}
 
 ### 条件 (三元) 操作符 (?:)
 三元操作符用于替代 if else 条件判断语句。
@@ -227,7 +227,7 @@ if (kid) {
 }
 ```
 
-## jquery规范 {#}
+## jquery规范 {#jquery}
 
 ### jQuery 变量
 * 存放 jQuery 对象的变量以 $ 开头；

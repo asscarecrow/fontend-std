@@ -17,3 +17,12 @@
     * [CLASS命名](css/README.md#class)
     * [选择器](css/README.md#selector)
     * [代码组织](css/README.md#organization)
+* [三、 JS](js/README.md)
+    * [注释](js/README.md#note)
+    * [命名](js/README.md#name)
+    * [命名语法](js/README.md#sync)
+    * [布尔表达式](js/README.md#boolean)
+    * [不要在 Array 上使用 for-in 循环](js/README.md#array)
+    * [二元和三元操作符](js/README.md#operate)
+    * [jquery规范](js/README.md#jquery)
+    
