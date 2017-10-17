@@ -35,4 +35,4 @@
 4. [极客学院](http://wiki.jikexueyuan.com/project/web-development/css.html)
 5. [Code Guide by @AlloyTeam] (http://alloyteam.github.io/CodeGuide/)
 6. [前端JavaScript规范](https://yq.aliyun.com/articles/51488)
-
+7. [Vue.js 组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md#目录)

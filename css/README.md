@@ -194,7 +194,18 @@
 
 
 /*==============================环球首页=============================*/
-.article .form-block .subTit {font-size: color: 999;}
+.article .form-block .subTit {font-size: color: #999;}
 ```
+## scss{#scss}
+* 与css代码一样尽量单行排列，单行放置不完第二行要左对齐选择符`{`后的第一个属性
+* 嵌套的选择器要缩进4个字符，要有明显的层级关系
+
+```scss
+.home-index {position: relative;...
+             font-size: 14px;
+    .head {padding: 10px;}
+}
+
+
 
 
