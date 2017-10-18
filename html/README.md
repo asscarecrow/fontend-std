@@ -22,12 +22,14 @@
 </html>
 ```
 ## HTML5 doctype{#doctype}
-为每个 HTML 页面的第一行添加标准模式（standard mode）的声明，这样能够确保在每个浏览器中拥有一致的展现。
-
+* 为每个 HTML 页面的第一行添加标准模式（standard mode）的声明，这样能够确保在每个浏览器中拥有一致的展现。
+* 在`<head>`标签里面必须添加`<meta charset="UTF-8">`,定义页面的编码格式
+* 在`<head>`标签里面必须添加`<meta http-equiv="X-UA-Compatible" content="IE=edge">`,可以避免IE使用兼容模式
 ```html
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="UTF-8">
   </head>
 </html>
 ```
@@ -40,16 +42,23 @@
 
 这里列出了[语言代码表](https://www.sitepoint.com/iso-2-letter-language-codes/)。
 
+```html
+<!DOCTYPE html>
+<html lang="ZH">
+```
+
 ## 属性顺序{#order}
 HTML 属性应当按照以下给出的顺序依次排列，确保代码的易读性。
 
 * `class`
-* `id`, `name`
+* `id`,
+* `name`
 * `data-*`
 * `src`, `for`, `type`, `href`, `value`
 * `title`, `alt`
 * `role`, `aria-*`
 class 用于标识高度可复用组件，因此应该排在首位。id 用于标识具体组件，应当谨慎使用（例如，页面内的书签），因此排在第二位。
+以上的顺序，上一层应该排在下一层的前面，同一层内排序不分先后
 ## 布尔（boolean）型属性{#boolean}
 布尔型属性可以在声明时不赋值。XHTML 规范要求为其赋值，但是 HTML5 规范不需要。
 更多信息请参考 [WhatWG section on boolean attributes](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes)：
@@ -79,4 +88,8 @@ class 用于标识高度可复用组件，因此应该排在首位。id 用于�
 
 <!-- Better -->
 <img class="avatar" src="...">
+
 ```
+## 行内样式
+* 养成在样式文件写样式的习惯
+* 避免在标签里面写很多的样式，如果需要请在style样式文件中添加样式
