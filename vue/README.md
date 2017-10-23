@@ -52,13 +52,13 @@ beforeRouteLeave(to,from,next){
 * 公共组件就是独立的一块，要将公共组件相关的东西写在一块，有利于重复调用
 * 一个独立组件，视组件大小、API多少而定，小的应该在文件头部注释写明参数以及回调；比较大的组件要在组件文件夹内写明组件的README.md,README.md要编写得清晰明了，最好具备开源的基础
 
-## 模板标签<template>
+## template标签{#template}
 * 尽量使用Vue的语法糖，比如可以用:style代替v-bind:style；用@click代替v-on:click
 * 使用for列表循环要绑定`:key`，可以优化列表更新
 * 简单的数据处理返回应该用过滤器
 * 根元素应该根据具体情况给一个class控制样式，例如会员中心根模块首页：`home-index`
 
-## script标签<template>
+## script标签{#script}
 * 使用 name 属性。借助于 vue devtools 可以让你更方便的测试。指定 name 选项的另一个好处是便于调试--有名字的组件有更友好的警告信息。
 * 对象的属性应该按照以下方法统一排序（考虑了数据之间的关联性与常用性）
 * methods 里面的方法使用驼峰命名的动宾短语。
@@ -89,7 +89,7 @@ beforeRouteLeave(to,from,next){
 </script>
 ```
 
-## style标签<style>{#style}
+## style标签{#style}
 * 只存放本组件相关的css
 * 其余规则参考css规范
 

@@ -33,7 +33,7 @@
 2. 《重构-改善既有代码的设计》马丁·福勒 (Martin Fowler)
 3. [编码规范 by @mdo](http://codeguide.bootcss.com/)
 4. [极客学院](http://wiki.jikexueyuan.com/project/web-development/css.html)
-5. [Code Guide by @AlloyTeam] (http://alloyteam.github.io/CodeGuide/)
+5. [Code Guide by @AlloyTeam](http://alloyteam.github.io/CodeGuide/)
 6. [前端JavaScript规范](https://yq.aliyun.com/articles/51488)
 7. [Vue.js 组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md#目录)
 8. [Vue风格指南](https://cn.vuejs.org/v2/style-guide/)

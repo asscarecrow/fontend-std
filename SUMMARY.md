@@ -18,6 +18,7 @@
     * [选择器](css/README.md#selector)
     * [代码组织](css/README.md#organization)
 * [三、 JS](js/README.md)
+    * [要点](js/README.md#key)
     * [注释](js/README.md#note)
     * [命名](js/README.md#name)
     * [命名语法](js/README.md#sync)
@@ -26,4 +27,9 @@
     * [二元和三元操作符](js/README.md#operate)
     * [jquery规范](js/README.md#jquery)
 * [四、 Vue](vue/README.md)
+    * [要点](vue/README.md#key)
+    * [组件](vue/README.md#components)
+    * [template标签](vue/README.md#template)
+    * [script标签](vue/README.md#script)
+    * [style标签](vue/README.md#style)
     
