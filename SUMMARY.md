@@ -20,6 +20,9 @@
     * [选择器](css/README.md#selector)
     * [代码组织](css/README.md#organization)
     * [scss](css/README.md#scss)
+    * [图片](css/README.md#img)
+    * [范本](css/README.md#example)
+
 * [三、 JS](js/README.md)
     * [要点](js/README.md#key)
     * [注释](js/README.md#note)
