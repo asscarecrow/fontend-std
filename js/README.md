@@ -6,6 +6,7 @@
 ## 注释{#note}
 
 >As short as possible（如无必要，勿增注释）：尽量提高代码本身的清晰性、可读性。
+
 >As long as necessary（如有必要，尽量详尽）：合理的注释、空行排版等，可以让代码更易阅读、更具美感。
 单行注释
 
@@ -21,7 +22,6 @@
 * 当函数是内部函数，外部不可访问时，可以使用 @inner 标识；
 * `if...else...`，`switch...case...`,表示代码分支的应该清楚标明此代码分支的意义
 
-
 ```javascript
 /**
  * @param {string} p1 参数1的说明
@@ -35,11 +35,11 @@
 function foo(p1, p2, p3) {
     var p3 = p3 || 10;
     if(p3==1){
-        //表示个人
+        // 表示个人
     }else(p3==2){
-        //表示企业
+        // 表示企业
     }else{
-        //表示协会与产业园
+        // 表示协会与产业园
     }
     return {
         p1: p1,
@@ -47,16 +47,24 @@ function foo(p1, p2, p3) {
         p3: p3
     };
 }
-```
-文件注释
 
-文件注释用于告诉不熟悉这段代码的读者这个文件中包含哪些东西。应该提供文件的大体内容，它的作者，依赖关系和兼容性信息。如下:
+// 先判断类型，提交到不同的接口
+// type: 1 个人，2 企业
+$("#post").on("click,function(){
+    ...
+});
+
+```
+**文件注释**
+
+文件注释用于告诉不熟悉这个文件的读者这个文件中包含哪些东西。应该提供文件的大体内容，它的作者，依赖关系和兼容性信息。如下:
 
 ```javascript
 /**
  * @fileoverview 文件的描述，用途和相关信息还有依赖
  * 
  * @author 作者、作者联系方式一般留邮箱
+ * @support 兼容性
  * Copyright 2009 Meizu Inc. All Rights Reserved. 版权信息
  */
  ```
@@ -84,14 +92,15 @@ var POST_URL = '/home/article/post';
 var $form = $("#regForm");
 ```
 
-1. *函数*，及其*参数*使用Camel命名法。
+1.*函数*，及其*参数*使用Camel命名法。
 
 ```javascript
 function stringFormat(source) {}
 
 function hear(theBells) {}
 ```
-2. *类*，使用 `Pascal` 命名法,其 *方法/属性*，使用 Camel 命名法
+2.*类*，使用 `Pascal` 命名法,其 *方法/属性*，使用`Camel` 命名法
+
 ```javascript
 
 function TextNode(value, engine) {
@@ -103,7 +112,9 @@ TextNode.prototype.clone = function () {
     return this;
 };
 ```
-3. *枚举变量*使用 `Pascal` 命名法。枚举的属性，使用全部字母大写，单词间下划线分隔的命名方式。
+`Pascal`命名法与`Camel`命名法类似，只是*首字母*要大写
+
+3.*枚举变量*使用 `Pascal` 命名法。枚举的属性，使用全部字母大写，单词间下划线分隔的命名方式。
 
 ```javascript
 var TargetState = {
@@ -238,7 +249,28 @@ if (kid) {
   foo(kid);
 }
 ```
+## 样式{#style}
+**本着样式与行为分离的原则，是不允许js直接操作页面的css样式的，但是也有特例，js模板里面的html标签是可以直接写样式的，这种操作会降低我们维护的复杂度，增加方便性**
 
+**js需要控制样式的地方尽量用class来控制，如：`display: none`,可用`.hide`代替**
+
+```javascript
+ //发送短信验证码处理入口
+var handleFn=function(){
+    if(isGeetest==="captcha"){
+        var html = '<div style="padding-top:30px; text-align: center;">' +
+            '<p style="margin-bottom: 20px;"><img data-rel="captcha" src="/common/verifyCode?t='+new Date().getTime()+'" /></p>' +
+            '<p><input name="captcha" maxlength="4" style="border: 1px solid #f0f0f0;padding: 0 10px;width:150px;height: 38px;text-align: center;" placeholder="请输入上图字符" autocomplete="off" /></p>' +
+            '</div>';
+        layer.open({
+            type: 1,
+            title: '获取短信验证码',
+            area:["356px","300px"],
+            btn:["确定","取消"],
+            content:html,
+            ...
+        })
+```
 ## jquery规范 {#jquery}
 
 ### jQuery 变量
@@ -262,7 +294,12 @@ $subBtn.click(function(){...});
 var $productIds = $("#products .class");
 
 // Recommended
+//无须复用
 var $productIds = $("#products").find(".class");
+
+//需要复用
+var $products = $("#products"), 
+    $productIds = $products.find(".class");
 ```
 
 ### DOM 操作
@@ -311,7 +348,7 @@ $("#list").on("click", "a", myClickHandler);
 
 ### 链式写法
 * 尽量使用链式写法而不是用变量缓存或者多次调用选择器方法；
-* 当链式写法超过三次或者因为事件绑定变得复杂后，使用换行和缩进保持代码可读性；
+* 使用换行和缩进保持代码可读性；
 
 ```javascript
 $("#myLink")
@@ -321,7 +358,7 @@ $("#myLink")
   .show();
 ```
 ### 性能优化
-1. 避免不必要的 DOM 操作
+1.避免不必要的 DOM 操作
 浏览器遍历 DOM 元素的代价是昂贵的。最简单优化 DOM 树查询的方案是，当一个元素出现多次时，将它保存在一个变量中，就避免多次查询 DOM 树了。
 
 ```javascript
@@ -340,7 +377,7 @@ for (var i = 0; i < 100; i++) {
   document.getElementById("myList").innerHTML += "<span>" + i + "</span>";
 }
 ```
-2. 缓存数组长度
+2.缓存数组长度
 循环无疑是和 JavaScript 性能非常相关的一部分。通过存储数组的长度，可以有效避免每次循环重新计算。
 
 注: 虽然现代浏览器引擎会自动优化这个过程，但是不要忘记还有旧的浏览器。
@@ -380,7 +417,7 @@ for (i = 0; i < arr.length; i++) {
 
 }());
 ```
-4. 避免使用 jQuery 实现动画
+4.避免使用 jQuery 实现动画
 
 * 简单的动画可以用css代替
 * 复杂点的动画可以使用javascript 动画库[Velocityjs](http://velocityjs.org/)、[Gsap](https://greensock.com/gsap)

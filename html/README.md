@@ -21,31 +21,26 @@
   </body>
 </html>
 ```
-## HTML5 doctype{#doctype}
+## 通用{#doctype}
 * 为每个 HTML 页面的第一行添加标准模式（standard mode）的声明，这样能够确保在每个浏览器中拥有一致的展现。
+* 强烈建议为 html 根元素指定 lang 属性，从而为文档设置正确的语言，有助于语音合成工具确定其所应该采用的发音，以及翻译工具确定其翻译时所应遵守的规则等等。
 * 在`<head>`标签里面必须添加`<meta charset="UTF-8">`,定义页面的编码格式
 * 在`<head>`标签里面必须添加`<meta http-equiv="X-UA-Compatible" content="IE=edge">`,可以避免IE使用兼容模式
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="UTF-8">
-  </head>
-</html>
-```
-## 语言属性{#attr}
-根据 HTML5 规范：
-> 强烈建议为 html 根元素指定 lang 属性，从而为文档设置正确的语言。
-> 这将有助于语音合成工具确定其所应该采用的发音，有助于翻译工具确定其翻译时所应遵守的规则等等。
 
-更多关于 lang 属性的知识可以从 [此规范](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element) 中了解。
-
-这里列出了[语言代码表](https://www.sitepoint.com/iso-2-letter-language-codes/)。
 
 ```html
 <!DOCTYPE html>
 <html lang="ZH">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+</html>
 ```
+更多关于 lang 属性的知识可以从 [此规范](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element) 中了解。
+
+这里列出了[语言代码表](https://www.sitepoint.com/iso-2-letter-language-codes/)。
+
 
 ## 属性顺序{#order}
 HTML 属性应当按照以下给出的顺序依次排列，确保代码的易读性。
@@ -57,8 +52,10 @@ HTML 属性应当按照以下给出的顺序依次排列，确保代码的易读
 * `src`, `for`, `type`, `href`, `value`
 * `title`, `alt`
 * `role`, `aria-*`
+
 class 用于标识高度可复用组件，因此应该排在首位。id 用于标识具体组件，应当谨慎使用（例如，页面内的书签），因此排在第二位。
 以上的顺序，上一层应该排在下一层的前面，同一层内排序不分先后
+
 ## 布尔（boolean）型属性{#boolean}
 布尔型属性可以在声明时不赋值。XHTML 规范要求为其赋值，但是 HTML5 规范不需要。
 更多信息请参考 [WhatWG section on boolean attributes](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes)：
@@ -91,5 +88,15 @@ class 用于标识高度可复用组件，因此应该排在首位。id 用于�
 
 ```
 ## 行内样式
-* 养成在样式文件写样式的习惯
-* 避免在标签里面写很多的样式，如果需要请在style样式文件中添加样式
+* 养成在样式文件`.css`写样式的习惯
+* 如果一个样式要重复使用多次，请在style样式文件`.css`中添加样式
+* 避免在标签里面写很多的样式，如果需要请在style样式文件`.css`中添加样式
+
+**反面教材：**
+
+![错误的CSS方法](style.png)
+
+* 图中的1，2，3标注的地方分别可以用`.red`,`.grey`,`.blue` 在css样式中声明
+* 图4要视具体情况，命名一个语义化的`class`，图中的原意是用css写的一个关闭按钮，所以我们可以用`.close`声明
+
+
