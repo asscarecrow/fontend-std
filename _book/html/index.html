@@ -293,19 +293,6 @@
     
         <li class="chapter " data-level="1.4.7" data-path="../css/">
             
-                <a href="../css/#note">
-            
-                    
-                    注释
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.8" data-path="../css/">
-            
                 <a href="../css/#class">
             
                     
@@ -317,7 +304,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="../css/">
+        <li class="chapter " data-level="1.4.8" data-path="../css/">
             
                 <a href="../css/#selector">
             
@@ -330,12 +317,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.10" data-path="../css/">
+        <li class="chapter " data-level="1.4.9" data-path="../css/">
             
                 <a href="../css/#organization">
             
                     
                     代码组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../css/">
+            
+                <a href="../css/#note">
+            
+                    
+                    注释
             
                 </a>
             
@@ -661,6 +661,7 @@
 <li>&#x5BF9;&#x4E8E;&#x5C5E;&#x6027;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x786E;&#x4FDD;&#x5168;&#x90E8;&#x4F7F;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x7EDD;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x5355;&#x5F15;&#x53F7;&#x3002;</li>
 <li>&#x4E0D;&#x8981;&#x5728;&#x81EA;&#x95ED;&#x5408;&#xFF08;self-closing&#xFF09;&#x5143;&#x7D20;&#x7684;&#x5C3E;&#x90E8;&#x6DFB;&#x52A0;&#x659C;&#x7EBF; -- HTML5 &#x89C4;&#x8303;&#x4E2D;&#x660E;&#x786E;&#x8BF4;&#x660E;&#x8FD9;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;</li>
 <li>&#x4E0D;&#x8981;&#x7701;&#x7565;&#x53EF;&#x9009;&#x7684;&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#xFF08;closing tag&#xFF09;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&lt;/li&gt; &#x6216; &lt;/body&gt;&#xFF09;&#x3002;</li>
+<li>&#x6807;&#x7B7E;&#x6CA1;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x5C31;&#x4E0D;&#x8981;&#x4E71;&#x52A0;&#xFF0C;&#x4F8B;&#x5982;&#x5728;<code>&lt;a&gt;</code>&#x52A0;&#x4E0A;<code>value</code>&#x5C5E;&#x6027;</li>
 </ul>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -735,6 +736,7 @@
 <li>&#x517B;&#x6210;&#x5728;&#x6837;&#x5F0F;&#x6587;&#x4EF6;<code>.css</code>&#x5199;&#x6837;&#x5F0F;&#x7684;&#x4E60;&#x60EF;</li>
 <li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x8981;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x591A;&#x6B21;&#xFF0C;&#x8BF7;&#x5728;style&#x6837;&#x5F0F;&#x6587;&#x4EF6;<code>.css</code>&#x4E2D;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;</li>
 <li>&#x907F;&#x514D;&#x5728;&#x6807;&#x7B7E;&#x91CC;&#x9762;&#x5199;&#x5F88;&#x591A;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8BF7;&#x5728;style&#x6837;&#x5F0F;&#x6587;&#x4EF6;<code>.css</code>&#x4E2D;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;</li>
+<li>&#x53EA;&#x6709;&#x7279;&#x4F8B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x5199;&#x884C;&#x5185;&#x6837;&#x5F0F;&#xFF0C;&#x5982;css&#x6837;&#x5F0F;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x597D;<code>.news</code>&#x7684;&#x5BBD;&#x5EA6;&#x4E3A;500&#xFF0C;&#x4F46;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x53EA;&#x9700;&#x8981;450&#xFF0C;&#x8FD9;&#x79CD;&#x7279;&#x6B8A;&#x5316;&#x7684;&#x60C5;&#x51B5;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x884C;&#x5185;&#x6837;&#x5F0F;</li>
 </ul>
 <p><strong>&#x53CD;&#x9762;&#x6559;&#x6750;&#xFF1A;</strong></p>
 <p><img src="style.png" alt="&#x9519;&#x8BEF;&#x7684;CSS&#x65B9;&#x6CD5;"></p>
@@ -785,7 +787,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一、HTML","level":"1.3","depth":1,"next":{"title":"语法","level":"1.3.1","depth":2,"anchor":"#sync","path":"html/README.md","ref":"html/README.md#sync","articles":[]},"previous":{"title":"前言","level":"1.2","depth":1,"path":"preface.md","ref":"preface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html/README.md","mtime":"2017-10-30T06:11:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-30T02:57:51.310Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"一、HTML","level":"1.3","depth":1,"next":{"title":"语法","level":"1.3.1","depth":2,"anchor":"#sync","path":"html/README.md","ref":"html/README.md#sync","articles":[]},"previous":{"title":"前言","level":"1.2","depth":1,"path":"preface.md","ref":"preface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html/README.md","mtime":"2017-10-31T06:40:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-31T01:53:40.395Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
