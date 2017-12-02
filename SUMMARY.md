@@ -32,4 +32,5 @@
     * [template标签](vue/README.md#template)
     * [script标签](vue/README.md#script)
     * [style标签](vue/README.md#style)
+* [四、 其他](other/README.md)
 
